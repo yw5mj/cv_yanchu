@@ -60,7 +60,7 @@
 %----------------------------------------------------------------------------------------
 
 \renewcommand{\title}[1]{
-{\huge{\color{slateblue}\textbf{#1}}}\\ % Header section name and color
+{\Huge{\color{slateblue}\textbf{#1}}}\\ % Header section name and color
 \rule{\textwidth}{0.5mm}\\ % Rule under the header
 }
 
@@ -68,15 +68,16 @@
 %	JOB COMMAND
 %----------------------------------------------------------------------------------------
 
-\newcommand{\job}[6]{
+\newcommand{\job}[4]{
 \begin{tabbing}
 \hspace{2cm} \= \kill
-\textbf{#1} \> \href{#4}{#3} \\
-\textbf{#2} \>\+ \textit{#5} \\
+\textbf{#1} \> {#3} \\
+\textbf{#2} \> \+
+\raisebox{-.8\height}{
 \begin{minipage}{\smallertextwidth}
-\vspace{2mm}
-#6
-\end{minipage}
+\vspace{1mm}
+\small{#4}
+\end{minipage}}
 \end{tabbing}
 \vspace{2mm}
 }
